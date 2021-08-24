@@ -1,8 +1,8 @@
 // your ImageSlider code here!
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class ImageSlider extends Component {
+class ImageSlider extends React.Component {
     constructor() {
         super()
         this.state = {

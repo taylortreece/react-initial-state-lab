@@ -1,8 +1,8 @@
 // your Bomb code here!
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class Bomb extends Component {
+class Bomb extends React.Component {
     constructor(props) {
         super()
         this.state = {
@@ -11,17 +11,15 @@ class Bomb extends Component {
     }
 
     timer = () => {
-        if(this.secondsLeft === 0) {
+        if(this.state.secondsLeft < 1) {
             return "Boom!" 
         } else {
-            let currentSecondsLeft = this.secondsLeft - 1
-            this.setState({secondsLeft: currentSecondsLeft})
-            return `${this.secondsLeft} seconds left before I go boom!`
+            return `${this.state.secondsLeft} seconds left before I go boom!`
         }
     }
 
     render() {
-        return // setInterval(this.timer(), 1000)
+        return <h1>{this.timer()}</h1>
     };
 }
 
